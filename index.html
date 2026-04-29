@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark" data-accent="blue">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budgty — Controle de Gastos Gamificado</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scanlines"></div>
+    <header class="topbar pixel-panel">
+      <h1>BUDGTY</h1>
+      <div class="controls">
+        <label>
+          Tema
+          <select id="themeSelect" class="pixel-select">
+            <option value="dark">Escuro</option>
+            <option value="light">Claro</option>
+          </select>
+        </label>
+        <label>
+          Cor principal
+          <select id="accentSelect" class="pixel-select">
+            <option value="red">Vermelho</option>
+            <option value="blue" selected>Azul</option>
+            <option value="green">Verde</option>
+            <option value="yellow">Amarelo</option>
+            <option value="pink">Rosa</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="pixel-panel profile">
+        <h2>Perfil do Jogador</h2>
+        <div class="avatar">⚔️</div>
+        <p><strong>Nome:</strong> Luna Budgeteer</p>
+        <p><strong>Nível:</strong> 12</p>
+        <p><strong>XP:</strong> 2.430 / 3.000</p>
+        <div class="xp-bar"><span style="width: 81%"></span></div>
+        <p class="rank">Rank: Guardiã dos Cofres</p>
+      </section>
+
+      <section class="pixel-panel kpis">
+        <h2>Status do Mês</h2>
+        <div class="cards">
+          <article class="card pulse">
+            <h3>Orçamento</h3>
+            <p>R$ 5.000</p>
+          </article>
+          <article class="card">
+            <h3>Gasto</h3>
+            <p>R$ 3.180</p>
+          </article>
+          <article class="card glow">
+            <h3>Economia</h3>
+            <p>R$ 1.820</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pixel-panel tasks">
+        <h2>Quests Financeiras</h2>
+        <ul>
+          <li><input type="checkbox" checked /> Sem delivery por 3 dias <span>+80 XP</span></li>
+          <li><input type="checkbox" /> Revisar assinaturas mensais <span>+120 XP</span></li>
+          <li><input type="checkbox" /> Investir 15% da renda <span>+150 XP</span></li>
+          <li><input type="checkbox" checked /> Registrar todos os gastos da semana <span>+90 XP</span></li>
+        </ul>
+      </section>
+
+      <section class="pixel-panel chart-section">
+        <h2>Gastos por Categoria</h2>
+        <div class="bars">
+          <div class="bar" style="--h:78%"><span>Moradia</span></div>
+          <div class="bar" style="--h:55%"><span>Mercado</span></div>
+          <div class="bar" style="--h:35%"><span>Lazer</span></div>
+          <div class="bar" style="--h:43%"><span>Transporte</span></div>
+          <div class="bar" style="--h:27%"><span>Saúde</span></div>
+        </div>
+      </section>
+
+      <section class="pixel-panel monthly">
+        <h2>Gastos por Mês</h2>
+        <table>
+          <thead>
+            <tr><th>Mês</th><th>Gasto</th><th>Meta</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Jan</td><td>R$ 4.100</td><td>R$ 5.000</td><td>✅</td></tr>
+            <tr><td>Fev</td><td>R$ 4.750</td><td>R$ 5.000</td><td>✅</td></tr>
+            <tr><td>Mar</td><td>R$ 5.300</td><td>R$ 5.000</td><td>⚠️</td></tr>
+            <tr><td>Abr</td><td>R$ 3.180</td><td>R$ 5.000</td><td>🔥</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
